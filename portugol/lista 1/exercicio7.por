@@ -3,6 +3,18 @@ programa
 	
 	funcao inicio()
 	{
+	/*
+	 * Um sistema de equações lineares do tipo: 
+	 * 
+	 * AX + BY = C
+	 * DX + EY = F, Pode ser resolvido segundo mostrado abaixo:
+	 * 
+	 * X = ( CE - BF ) / ( AE  - BD )
+	 * Y = ( AF - CD ) / (AE - BD
+	 * 
+	 * Escreva um sistema que lê os coeficientes a,b,c,d,e e f 
+	 * e calcula e mostra os valores de x e y. 
+	 */
 		real a, b, c, d, e1, f, x, y
 
 		escreva("Digite o valor da letra A: ")
@@ -20,7 +32,7 @@ programa
 
 		x =  ((c * e1) - (b * f)) / ((a * e1) - (b * d))
 
-		y = ((a * f) - (c * a)) / ((a * e1) - (b * d))
+		y = ((a * f) - (c * d)) / ((a * e1) - (b * d))
 
 		escreva("Resultado de X: " + x)
 		escreva("Resultado de Y: " + y)
@@ -31,7 +43,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 384; 
+ * @POSICAO-CURSOR = 742; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
