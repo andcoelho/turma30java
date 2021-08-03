@@ -18,24 +18,23 @@ public class Exercicio2 {
 			
 			if(numero1 >= numero2 && numero1 >= numero3) {
 				if(numero2> numero3)
-					System.out.printf("%d é maior que %d e %d", numero1, numero2, numero3);
+					System.out.printf("%d é maior que %d que é %d", numero1, numero2, numero3);
+					
 				else
-					System.out.printf("%d é maior que %d e %d", numero1, numero3, numero2);
+					System.out.printf("%d é maior que %d que é %d", numero1, numero3, numero2);
 			}
 			else if(numero2 >= numero1 && numero2 >= numero3) {
 				if(numero1 > numero3)
-					System.out.printf("%d é maior que %d e %d", numero2, numero1, numero3);
+					System.out.printf("%d é maior que %d que é %d", numero2, numero1, numero3);
 				else
-					System.out.printf("%d é maior que %d e %d", numero2, numero3, numero1);
+					System.out.printf("%d é maior que %d que é %d", numero2, numero3, numero1);
 			}
 			else{
 				if(numero1> numero2)
-					System.out.printf("%d é maior que %d e %d", numero3, numero1, numero2);
+					System.out.printf("%d é maior que %d que é %d", numero3, numero1, numero2);
 				else
-					System.out.printf("%d é maior que %d e %d", numero3, numero2, numero1);
-			}
-			
-			
+					System.out.printf("%d é maior que %d que é %d", numero3, numero2, numero1);
+			}	
 					
 		}
 }
