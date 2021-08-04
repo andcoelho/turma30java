@@ -26,5 +26,7 @@ Scanner scan = new Scanner(System.in);
 		
 		System.out.printf("O maior salario é %d da pessoa %s", maiorSalario, nomeMaiorSalario);
 		
+		scan.close();
+		
 	}
 }
