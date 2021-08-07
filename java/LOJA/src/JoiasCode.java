@@ -233,9 +233,11 @@ public class JoiasCode
 							nome();
 							linha();
 							contador2 = contador * 0.9;
+							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");							
 							System.out.print("\t\t\n VALOR TOTAL: R$ " + Math.round(contador2) + ",00");
 							contador2 = contador * 0.09;
 							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							linha();
 						break;
 						
 						case 2:
@@ -243,9 +245,11 @@ public class JoiasCode
 							nome();
 							linha();
 							contador2 = contador * 1.1;
+							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");
 							System.out.print("\t\t\n VALOR TOTAL: R$ " + Math.round(contador2) + ",00");
 							contador2 = contador * 0.09;
 							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							linha();
 						break;
 							
 						case 3:
@@ -253,17 +257,20 @@ public class JoiasCode
 							nome();
 							linha();
 							contador = (contador * 1.15) / 2;
-							System.out.print("\t\tPARCELADO EM 2X | 15% DE ACRÉSCIMO\n");
-							System.out.print("\t\t\n VALOR TOTAL DE CADA PARCELA: R$ " + Math.round(contador) + ",00");
+							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");
+							System.out.print("\n\tPARCELADO EM 2X | 15% DE ACRÉSCIMO\n");
+							System.out.print("\tVALOR TOTAL DE CADA PARCELA: R$ " + Math.round(contador) + ",00");
 							contador2 = contador * 0.09;
-							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\n\t 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							linha();
 						break;
 						
 						default:
-							System.out.printf("OPÇÃO INVÁLIDA, TENTE NOVAMENTE.\n");	
+							System.out.printf("OPÇÃO INVÁLIDA, TENTE NOVAMENTE.\n");
+						break;
 						}
 							
-					}while (pagamento >= 3);
+					}while (pagamento > 3);
 					
 					System.out.print("\n\n\t        ✧ RELAÇÃO DE PRODUTOS ✧");
 					linha();
@@ -287,7 +294,7 @@ public class JoiasCode
 					System.out.print("\n\t\t      \n");
 					nome();
 					linha(); 
-					System.out.println("\t\t Até breve 45!!");
+					System.out.println("\t\t Até breve !!");
 				}
 				
 			}
@@ -312,11 +319,11 @@ public class JoiasCode
 	// Função Slogan - Mostra no INICIO -
 	public static void nome() {
 
-		System.out.print("\t\t☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆\n");
-		System.out.print("\t\t☆   ╔════════════════════╗  ☆\n");
-		System.out.print("\t\t☆    ❝    JÓIAS CODE 	   ❞   ☆\n");
-		System.out.print("\t\t☆   ╚════════════════════╝  ☆\n");
-		System.out.print("\t\t☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆\n");
+		System.out.print("\t    ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆\n");
+		System.out.print("\t    ☆   ╔════════════════════╗	  ☆\n");
+		System.out.print("\t    ☆    ❝    JÓIAS CODE     ❞	  ☆\n"); //GAMBIARRA!!!!!!!!!!!!!!
+		System.out.print("\t    ☆   ╚════════════════════╝	  ☆\n"); // NÃO MEXER!!!!!!!!!!!!!!!!
+		System.out.print("\t    ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆\n");
 		System.out.print("\n\t   ✧ TRAZENDO SEU BRILHO INTERIOR ✧");
 	}// Função Linha - Separação das opções -
 
