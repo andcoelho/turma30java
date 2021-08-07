@@ -43,7 +43,7 @@ public class JoiasCode
 
 		for (int x = 0; x < 10; x++) 
 		{
-			System.out.print("\n "+ codigo[x] + "\t  " + produto[x] + "\t  " + valores[x] + "\t  " + estoque[x]);
+			System.out.print("\n "+ codigo[x] + "\t\t" + produto[x] + "\t  " + valores[x] + "\t\t  " + estoque[x]);
 		}
 
 		linha();
@@ -107,7 +107,12 @@ public class JoiasCode
 						System.out.println("Código invalido!");
 						break;
 					}
-				*/
+					*/
+					if (auxCod.equals("G7-01") == false  && auxCod.equals("G7-02") == false && auxCod.equals("G7-03") == false && auxCod.equals("G7-04") == false && auxCod.equals("G7-05") == false && auxCod.equals("G7-06") == false && auxCod.equals("G7-07") == false && auxCod.equals("G7-08") == false && auxCod.equals("G7-09") == false && auxCod.equals("G7-010") == false) {
+						System.out.println("Código invalido!");
+						break;
+					}
+				
 				}
 				// FUNÇÃO DE CONTINUAR COMPRANDO 
 				System.out.println("\nDESEJA CONTINUAR COMPRANDO?");
@@ -123,7 +128,7 @@ public class JoiasCode
 					
 					for (int x = 0; x < 10; x++) 
 					{
-						System.out.print("\n "+ codigo[x] + "\t  " + produto[x] + "\t  " + valores[x] + "\t  " + estoque[x]);
+						System.out.print("\n "+ codigo[x] + "\t\t" + produto[x] + "\t  " + valores[x] + "\t\t  " + estoque[x]);
 					}
 				}
 
@@ -260,13 +265,13 @@ public class JoiasCode
 							
 					}while (pagamento >= 3);
 					
-					System.out.print("\t        ✧ RELAÇÃO DE PRODUTOS ✧");
+					System.out.print("\n\n\t        ✧ RELAÇÃO DE PRODUTOS ✧");
 					linha();
 					System.out.print("CÓDIGO\t        PRODUTO\t\t   PREÇO\t  ESTOQUE\n");
 					
 					for (int x = 0; x < 10; x++) 
 					{
-						System.out.print("\n "+ codigo[x] + "\t  " + produto[x] + "\t  " + valores[x] + "\t  " + estoque[x]);
+						System.out.print("\n "+ codigo[x] + "\t\t" + produto[x] + "\t  " + valores[x] + "\t\t  " + estoque[x]);
 					}
 					
 					linha();
