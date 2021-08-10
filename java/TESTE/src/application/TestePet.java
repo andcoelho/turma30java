@@ -1,6 +1,7 @@
 package application;
 
 import Entities.Cachorro;
+import Entities.Gato;
 import Entities.Pet;
 
 public class TestePet {
@@ -16,14 +17,20 @@ public class TestePet {
 		animal1.emiteSom();
 		System.out.printf("\nA idade é: %d anos", animal1.idade());
 		
-		//Cachorro - pet - latidoAlto / verdadeiro ou falso (construtor)
-		//Gato - pet - miadoAlto / verdadeiro ou falso  (construtor)
-		//Ave - pet - voa / verdadeiro ou falso (construtor)
-		
-		Cachorro cachorro1 = new Cachorro("pincher", 2018, false);
+		Cachorro cachorro1 = new Cachorro("pincher", 2018, true);
 		System.out.printf("\nRaça do cachorro: %s, ano nascimento: %d\n", cachorro1.getRaca(), cachorro1.getAnoNascimento());
 		
 		cachorro1.latido();
+		cachorro1.emiteSom();
+		
+		Gato pet2 = new Gato("Siames", 2014, false);
+		pet2.emiteSom();
+		
+		
+		
+		
+		
+	
 	}
 
 }

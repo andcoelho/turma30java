@@ -16,5 +16,16 @@ public class Gato extends Pet {
 	public void setMiadoAlto(boolean miadoAlto) {
 		this.miadoAlto = miadoAlto;
 	}
+	
+	@Override // herança de método da classe abstrata
+	public void emiteSom() {
+		if(miadoAlto) {
+			System.out.println("MIAU MIAU MIAU");
+		}
+		else {
+			System.out.println("miau miau miau");
+		}
+		
+	}
 
 }

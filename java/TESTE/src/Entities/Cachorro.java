@@ -29,6 +29,16 @@ public class Cachorro extends Pet {
 		}
 	}
 	
+	@Override // herança de método da classe abstrata
+	public void emiteSom() {
+		if(latidoAlto) {
+			System.out.println("AU AU AU AU");
+		}
+		else {
+			System.out.println("au au au au...");
+		}
+		
+	}
 	
 	
 	
