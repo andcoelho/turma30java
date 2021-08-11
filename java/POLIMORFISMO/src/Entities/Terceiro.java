@@ -25,7 +25,8 @@ public class Terceiro extends Funcionario {
 	
 	@Override
 	public double salario () {
-		return ((getHorasTrabalhadas()*getValorPorHora())+adicional);
+		//return ((getHorasTrabalhadas()*getValorPorHora())+adicional); - se fosse private
+		return horasTrabalhadas*valorPorHora+adicional;
 	}
 	
 	
