@@ -1,54 +1,30 @@
 package Entidades;
 
 public class Produto {
-	
-	// private - segurança total || atributos - é, tem, está
-	private String codigo;  // codigo e nome - construtores
-	private String nome;
+
+	//Atributos
+	private String codigo;
+	private String nome ;
 	private double valor;
-	private int estoque;	
+	private int estoque;
 	
-	//CONSTRUTOR
-	public Produto(String codigo, String nome) { // unico método com mesmo nome da classe: construtor
+	
+	//Construtores
+	public Produto(String codigo, String nome, double valor, int estoque) {
 		super();
 		this.codigo = codigo;
-		this.nome = nome;
-	}
-
-	public Produto(String codigo, String nome, double valor, int estoque) { // sobrecarga
-		super();
-		this.codigo = codigo;
-		this.nome = nome;
 		this.valor = valor;
-		if(estoque < 0) {
-			this.estoque = 0;
-		} 
-		else {
-			this.estoque = estoque;
-		}
+		this.estoque = estoque;
+		this.nome = nome;
 	}
 	
-	public Produto(String codigo) {
-		super();
-		this.codigo = codigo;
-	}
-	
-	//encapsulamento - metodo
-
-	public String getCodigo() { // mostrar / trazer (retorna o valor)
+	//Encapsuladores
+	public String getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) { // alterar
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public double getValor() {
@@ -63,30 +39,31 @@ public class Produto {
 		return estoque;
 	}
 
-	/*public void setEstoque(int estoque) {
+	public void setEstoque(int estoque) {
 		this.estoque = estoque;
-	}*/
-	
-	//METODOS
-	
-	public void incluirEstoque(int quantidade) {
-		if (quantidade <= 0) {
-			System.out.println("Quantidade incorreta!");
-		}
-		else {
-		this.estoque = this.estoque + quantidade;
-		}
-		
 	}
-	
-	public void retiraEstoque(int quantidade) {
-		if(quantidade > estoque) {
-			System.out.println("Quantidade indisponível");
-		}
-		else {
-			this.estoque = this.estoque - quantidade;
-		}
-	}
-	
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	//Métodos
+	public void tabela() {
+		System.out.print("\n " + this.codigo + "\t\t" + this.nome + "\t  " + this.valor + "\t       " + this.estoque);
+	}
+	
+	public void retirarEstoque(int qntd) {		
+		if (qntd > estoque) {
+			System.out.println("VAI DÁ NAO");
+		} else {
+			this.estoque -= qntd;
+		}
+	}
+	
+	
+	
 }
