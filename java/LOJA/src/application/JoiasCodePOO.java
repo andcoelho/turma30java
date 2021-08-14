@@ -17,6 +17,7 @@ public class JoiasCodePOO {
 		String auxCod;
 		int pos, x, auxQntd, pagamento;
 		char op, op2, op3;
+		double contador = 0.0;
 		
 		// LISTAS
 		ArrayList<Produto> itens = new ArrayList<>();
@@ -63,22 +64,22 @@ public class JoiasCodePOO {
 						pos = x;
 						System.out.print("\nCÓDIGO\tPRODUTO \tPREÇO \tESTOQUE");
 						System.out.print("\n" + itens.get(pos).getCodigo() + "\t" + itens.get(pos).getNome() + "\t"
-								+ itens.get(pos).getValor() + "\t  " + itens.get(pos).getEstoque() + "\n"); 
+								+ itens.get(pos).getValor() + "\t  " + itens.get(pos).getEstoque() + "\n");
 						System.out.print("\nINFORME A QUANTIDADE QUE DESEJA: ");
 						auxQntd = leia.nextInt();
 
 						// LAÇO CONDICIONAL DE VALIDAÇÃO DA QUANTIDADE NO ESTOQUE
-						if (auxQntd > itens.get(pos).getEstoque()) {
+						if (auxQntd > itens.get(pos).getEstoque()) {							
 							System.out.println("QUANTIDADE INVÁLIDA.");
-							System.out.println("O ESTOQUE É DE: " + itens.get(pos).getEstoque());
+							System.out.println("O ESTOQUE É DE: " + itens.get(pos).getEstoque()+"\n");
 
-						} else if (auxQntd <= 0) {
+						} else if (auxQntd < 0) {
 							System.out.println("QUANTIDADE INVÁLIDA.");
-							System.out.print("O ESTOQUE É DE: " + itens.get(pos).getEstoque());
+							System.out.print("O ESTOQUE É DE: " + itens.get(pos).getEstoque()+"\n");
 
 						} else if (itens.get(pos).getEstoque() == 0) {
 							System.out.println("QUANTIDADE INVÁLIDA.");
-							System.out.print("O ESTOQUE É DE: " + itens.get(pos).getEstoque());
+							System.out.print("O ESTOQUE É DE: " + itens.get(pos).getEstoque()+"\n");
 							
 						} else {
 							carrinho.add(new Produto(itens.get(pos).getCodigo(), itens.get(pos).getNome(),
@@ -97,10 +98,17 @@ public class JoiasCodePOO {
 						}
 					}
 				}
+				System.out.print("\t        ✧ RELAÇÃO DE PRODUTOS ✧");
+				linha();
+				System.out.print("CÓDIGO \tPRODUTO\t\t  PREÇO\t    ESTOQUE");
+				for (Produto lista : itens) {
+					System.out.print("\n" + lista.getCodigo() + "\t" + lista.getNome() + "\t  " + df.format(lista.getValor()) + "\t       "
+							+ lista.getEstoque());
+				}
 				
 				// CONDICIONAL QUE SAI DO LAÇO DO..WHILE
-				System.out.println("DESEJA CONTINUAR COMPRANDO?");
-				System.out.print("\nDIGITE 'S' PARA SIM E 'N' PARA NÃO: ");
+				System.out.println("\n\nDESEJA CONTINUAR COMPRANDO?");
+				System.out.println("DIGITE 'S' PARA SIM E 'N' PARA NÃO: ");
 				op = leia.next().toUpperCase().charAt(0);
 				linha();
 				
@@ -114,7 +122,11 @@ public class JoiasCodePOO {
 			}
 			// FINALIZAÇÃO DAS COMPRAS
 			linha();
-			System.out.printf("\t   VALOR TOTAL DA COMPRA: R$ %.2f", carrinho.get(0).getValor());
+			for(int i = 0; i < carrinho.size(); i++) {
+				pos = i;
+				contador += (carrinho.get(pos).getValor() * carrinho.get(pos).getEstoque());
+			}
+			System.out.print("\t   VALOR TOTAL DA COMPRA: R$" + df.format(contador));
 			linha();
 			System.out.print("\t\tFORMA DE PAGAMENTOS:\n\n");
 			System.out.print(" OPÇÃO 1 - A VISTA COM 10% DESCONTO\n");
